@@ -1,0 +1,21 @@
+# view settings
+set main-view  = id:yes date:default,local=yes author commit-title:graph=yes,refs=yes,overflow=false
+set blame-view = date:default id:yes,color line-number:yes,interval=1 text
+set pager-view = text
+set stage-view = text
+set log-view   = text
+set blob-view  = text
+set diff-view  = text:yes,commit-title-overflow=no
+
+set tab-size = 2
+
+set ignore-case = true
+
+set split-view-width = 80%
+set split-view-height = 80%
+
+set diff-options = -m --first-parent
+
+set refresh-mode = auto
+
+color cursor black white bold
