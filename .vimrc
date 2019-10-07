@@ -5,7 +5,8 @@ filetype off
 filetype plugin indent off
 
 " スワップファイルの作成先を変更
-set directory=~/.vim/swaps
+" set directory=~/.vim/swaps
+set noswapfile
 
 " ヤンクをクリップボードへ繋ぐ
 set clipboard+=unnamed
