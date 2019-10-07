@@ -73,11 +73,14 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 inoremap ' ''<LEFT>
 inoremap " ""<LEFT>
 
-" insert mode keymaps like emacs
+" insertモードでemacsのキーバインドを使えるようにする
 imap <C-p> <Up>
 imap <C-n> <Down>
 imap <C-b> <Left>
 imap <C-f> <Right>
+
+"tagsジャンプ時に候補が複数ある時は一覧表示
+noremap <C-]> g<C-]> 
 
 " visulaモードで選択してからのインデント調整で調整後に選択範囲を開放しない
 vnoremap > >gv
