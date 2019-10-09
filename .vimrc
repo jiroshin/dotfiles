@@ -250,12 +250,13 @@ call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
 " -------------------------------------------------------------------
 
 " gitのHEADとの差分を表示するプラグインの設定
-highlight clear SignColumn
+set signcolumn=yes
+let g:gitgutter_async = 1
+let g:gitgutter_sign_modified = 'rw'
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=yellow
 highlight GitGutterDelete ctermfg=red
 highlight GitGutterChangeDelete ctermfg=yellow
-let g:gitgutter_sign_modified = 'rw'
 
 " インデントを見やすくするプラグインをonにする
 let g:indent_guides_enable_on_vim_startup = 1
