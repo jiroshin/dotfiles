@@ -57,6 +57,7 @@ augroup END
 
 " キーのオリジナル再割り当て--------------------------------------------
 vnoremap x "_x
+nnoremap x "_x
 nnoremap 1 ^
 nnoremap 2 $
 vnoremap ? :'<,'>TComment<CR>
