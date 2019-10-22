@@ -3,7 +3,6 @@ source ~/dotfiles/.oh-my-zshrc
 # zsh補完
 autoload -U compinit
 compinit
-eval `dircolors /etc/DIR_COLORS`
 autoload -U colors
 colors
 zstyle ':completion:*' list-colors "${LS_COLORS}"
