@@ -4,7 +4,7 @@ scriptencoding utf8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac
 
-" 意図しない挙動を防ぐ 
+" 意図しない挙動を防ぐ
 filetype off
 filetype plugin indent off
 
@@ -21,9 +21,6 @@ set belloff=all
 " 行番号系
 set number
 highlight LineNr ctermfg=240
-
-" tagsファイルの場所.基本的に$HOME配下のtagsディレクトリを参照
-set tags=./tags,tags,~/tags
 
 " タイトル系
 set title
@@ -84,9 +81,6 @@ imap <C-p> <Up>
 imap <C-n> <Down>
 imap <C-b> <Left>
 imap <C-f> <Right>
-
-"tagsジャンプ時に候補が複数ある時は一覧表示
-noremap <C-]> g<C-]> 
 
 " visulaモードで選択してからのインデント調整で調整後に選択範囲を開放しない
 vnoremap > >gv
