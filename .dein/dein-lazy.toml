@@ -1,0 +1,17 @@
+# React
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['js']
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['js']
+
+# Ruby
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_ft = ['ruby']
+
+# slim
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
