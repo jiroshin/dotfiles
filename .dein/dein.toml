@@ -110,7 +110,6 @@ merged = 0
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-	nnoremap <C-p> :GFiles<CR>
 	command! -bang -nargs=* Rg
 	\ call fzf#vim#grep(
 	\ 'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
