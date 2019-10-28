@@ -118,6 +118,7 @@ hook_add = '''
 	\ : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
 	\ <bang>0)
 	nnoremap <C-g> :Rg<Space>
+	nnoremap <C-p> :GFiles<CR>
 '''
 
 # 括弧のレインボーハイライト
