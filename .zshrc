@@ -42,6 +42,7 @@ alias glo='git log --oneline' # コミットログを各一行で読む
 alias vi='vim'
 alias v='vim'
 alias t='tmux'
+alias brcopy='git symbolic-ref --short HEAD | pbcopy'
 
 # 移動系
 alias dot='cd ~/dotfiles'
