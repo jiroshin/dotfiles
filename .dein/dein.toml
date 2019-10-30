@@ -128,53 +128,28 @@ hook_add = '''
 '''
 
 # lsp -----------------------------------------------------
+# completion
 [[plugins]]
-repo = 'prabirshrestha/async.vim'
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-hook_add = '''
-  nnoremap gd :LspDefinition<CR>
-  let g:lsp_signs_enaled=0
-  let g:lsp_async_completion=0
-  let g:lsp_diagnostics_echo_cursor=1
-  let g:lsp_highlight_references_enabled=0
-  let g:lsp_text_edit_enabled=0
-  let g:lsp_virtual_text_enabled=0
-
-	if executable('solargraph')
-			" gem install solargraph
-			au User lsp_setup call lsp#register_server({
-					\ 'name': 'solargraph',
-					\ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-					\ 'initialization_options': {"diagnostics": "true"},
-					\ 'whitelist': ['ruby'],
-					\ })
-	endif
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+build = '''
+ git checkout release
 '''
-
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete.vim'
 hook_add = '''
-  let g:asyncomplete_auto_popup=1
-  set completeopt+=preview
-  autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-'''
-
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-lsp.vim'
-depends = 'asyncomplete.vim'
-depends = 'vim-lsp'
-merged = 0
-
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-file.vim'
-depends = 'asyncomplete.vim'
-hook_add = '''
-  au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
-    \ 'name': 'file',
-    \ 'whitelist': ['*'],
-    \ 'priority': 10,
-    \ 'completor': function('asyncomplete#sources#file#completor')
-    \ }))
+ inoremap <silent><expr> <TAB>
+		 \ pumvisible() ? "\<C-n>" :
+		 \ <SID>check_back_space() ? "\<TAB>" :
+		 \ coc#refresh()
+ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+ function! s:check_back_space() abort
+	 let col = col('.') - 1
+	 return !col || getline('.')[col - 1]  =~# '\s'
+ endfunction
+ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+ nmap <silent> gd <Plug>(coc-definition)
+ nmap <silent> gy <Plug>(coc-type-definition)
+ nmap <silent> gi <Plug>(coc-implementation)
+ nmap <silent> gr <Plug>(coc-references)
 '''
 # ---------------------------------------------------------
