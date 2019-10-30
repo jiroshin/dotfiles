@@ -1,0 +1,5 @@
+.vim/bundles
+.vim/plugged
+.vim/.netrwhist  
+.vim/autoload
+.vim/.tags
