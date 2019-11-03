@@ -8,13 +8,6 @@ hook_add = '''
   let NERDTreeShowHidden=1
 
 	nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 30<CR>
-
-	call NERDTreeHighlightFile('yml',    'yellow',  'none', 'yellow',  '#151515')
-	call NERDTreeHighlightFile('json',   'yellow',  'none', 'yellow',  '#151515')
-	call NERDTreeHighlightFile('html',   'yellow',  'none', 'yellow',  '#151515')
-	call NERDTreeHighlightFile('css',    'cyan',    'none', 'cyan',    '#151515')
-	call NERDTreeHighlightFile('rb',     'Red',     'none', 'red',     '#151515')
-	call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
 '''
 
 # ウィンドウの幅をctr+eで調整
@@ -129,6 +122,7 @@ hook_add = '''
 
 # lsp -----------------------------------------------------
 # completion
+# inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
@@ -146,7 +140,6 @@ hook_add = '''
 	 let col = col('.') - 1
 	 return !col || getline('.')[col - 1]  =~# '\s'
  endfunction
- inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
  nmap <silent> gd <Plug>(coc-definition)
  nmap <silent> gy <Plug>(coc-type-definition)
  nmap <silent> gi <Plug>(coc-implementation)
