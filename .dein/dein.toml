@@ -1,12 +1,7 @@
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-	function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
-	 exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
-	 exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-	endfunction
   let NERDTreeShowHidden=1
-
 	nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 30<CR>
 '''
 
