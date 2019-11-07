@@ -1,8 +1,15 @@
-set fenc=utf-8
-set encoding=utf-8
+set shell=/bin/zsh
+
+" encoding
+set encoding=utf8
 scriptencoding utf8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencoding=utf-8
+set termencoding=utf8
+set fileencodings=utf-8,ucs-boms,euc-jp,ep932
 set fileformats=unix,dos,mac
+set ambiwidth=double
+set nobomb
+set t_Co=256
 
 " 意図しない挙動を防ぐ
 filetype off
@@ -72,6 +79,11 @@ imap <C-p> <Up>
 imap <C-n> <Down>
 imap <C-b> <Left>
 imap <C-f> <Right>
+imap <C-a> <C-o>:call <SID>home()<CR>
+imap <C-e> <End>
+imap <C-d> <Del>
+imap <C-h> <BS>
+imap <C-k> <C-r>=<SID>kill()<CR>
 
 " visulaモードで選択してからのインデント調整で調整後に選択範囲を開放しない
 vnoremap > >gv

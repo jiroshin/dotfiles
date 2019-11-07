@@ -162,7 +162,7 @@ hook_add = '''
 '''
 
 # lsp -----------------------------------------------------
-# completion
+# completionでなんかエラー発生するのでコメントアウト
 # inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 [[plugins]]
 repo = 'neoclide/coc.nvim'
