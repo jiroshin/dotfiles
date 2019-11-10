@@ -1,10 +1,38 @@
-# React
 [[plugins]]
-repo = 'pangloss/vim-javascript'
-on_ft = ['js']
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript', 'typescript.tsx']
+
+# prettier
 [[plugins]]
-repo = 'maxmellon/vim-jsx-pretty'
-on_ft = ['js']
+repo = 'prettier/vim-prettier'
+on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.tsx']
+do = 'yarn install'
+
+# emmet
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html', 'xhtml', 'javascript.jsx', 'typescript.tsx']
+hook_add = '''
+  let g:user_emmet_leader_key='<C-e>'
+'''
+
+# autoclose html(xhtml) tags
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = ['html', 'xhtml', 'javascript', 'typescript', 'javascript.jsx', 'typescript.tsx']
+hook_add = '''
+  let g:closetag_filenames='*.html'
+  let g:closetag_xhtml_filenames='*.jsx,*.tsx,*.vue'
+  let g:closetag_filetypes='html'
+  let g:closetag_xhtml_filetypes='jsx,tsx,javascript.jsx,typescript.tsx,vue'
+  let g:closetag_emptyTags_caseSensitive=1
+  let g:closetag_shortcut='>'
+'''
+
+# styled-components
+[[plugins]]
+repo = 'styled-components/vim-styled-components'
+on_ft = ['javascript.jsx', 'typescript.tsx']
 
 # Ruby
 [[plugins]]
