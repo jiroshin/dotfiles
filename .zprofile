@@ -1,3 +1,6 @@
+# login with tmux
+[[ -z "$TMUX" ]] && tmux -u
+
 export LANG=ja_JP.UTF-8
 
 # Get the aliases and functions
