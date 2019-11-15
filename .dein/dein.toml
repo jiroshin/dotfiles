@@ -33,7 +33,7 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 depends = 'vim-airline'
 hook_add = '''
-	let g:airline_theme = 'term'
+	let g:airline_theme = 'onedark'
 	if !exists('g:airline_symbols')
 		let g:airline_symbols = {}
 	endif
