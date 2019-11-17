@@ -3,7 +3,7 @@
 repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript', 'typescript.tsx']
 
-# prettier
+# prettier coc.nvimのcoc-prettierを使うのもアリかも
 [[plugins]]
 repo = 'prettier/vim-prettier'
 on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.tsx']
