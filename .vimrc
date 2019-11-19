@@ -26,7 +26,7 @@ set belloff=all
 
 " 行番号系
 set number
-highlight LineNr ctermfg=240
+highlight LineNr ctermfg=244
 
 " タイトル系
 set title
