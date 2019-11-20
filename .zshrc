@@ -1,4 +1,8 @@
+# oh-my-zsh使う
 source ~/dotfiles/.oh-my-zshrc
+
+# PCごとに異なるパスやエイリアスを読み込む
+source ~/dotfiles/only-for-this-machine/main.sh
 
 # zsh補完
 autoload -U compinit
@@ -46,10 +50,9 @@ alias brcopy='git symbolic-ref --short HEAD | pbcopy'
 
 # 移動系
 alias dot='cd ~/dotfiles'
-alias snaq='cd ~/Desktop/snaqme_workspace/snaqme-admin'
 alias dev='cd ~/dev'
 alias desktop='cd ~/Desktop'
-alias m='cd ~/memo' 
+alias m='cd ~/memo'
 
 #コマンド系
 alias railss='bin/rails s -b 0.0.0.0 -p 3000'

@@ -5,7 +5,7 @@ export LANG=ja_JP.UTF-8
 
 # Get the aliases and functions
 if [ -f ~/.zshrc ]; then
-        . ~/.zshrc
+	. ~/.zshrc
 fi
 
 eval "$(rbenv init -)"
@@ -23,7 +23,3 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Lambda
 export PATH=~/.local/bin:$PATH
-
-export ANDROID_SDK="$HOME/Library/Android/sdk"
-export PATH="$ANDROID_SDK/emulator:$PATH"
-export PATH="$ANDROID_SDK/platform-tools:$PATH"
