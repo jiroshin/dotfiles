@@ -9,15 +9,15 @@ hook_add = '''
 [[plugins]]
 repo = 'simeji/winresizer'
 
-# インデントに色付け
+# インデント
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
-# 偶数列の色指定。今はコメントアウトしてる。
-# autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=17
 hook_add = '''
 	let g:indent_guides_enable_on_vim_startup = 1
+	let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 	let g:indent_guides_auto_colors = 0
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=0
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=237
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
 '''
 
 # コメントアウト

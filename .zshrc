@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 # oh-my-zsh使う
 source ~/dotfiles/.oh-my-zshrc
 

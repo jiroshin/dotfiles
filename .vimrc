@@ -9,7 +9,6 @@ set fileencodings=utf-8,ucs-boms,euc-jp,ep932
 set fileformats=unix,dos,mac
 set ambiwidth=double
 set nobomb
-set t_Co=256
 
 " 意図しない挙動を防ぐ
 filetype off
