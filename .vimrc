@@ -34,6 +34,7 @@ set title
 " インデント幅
 set shiftwidth=2
 set tabstop=2
+set ts=2
 
 "勝手にインデント系
 set autoindent
