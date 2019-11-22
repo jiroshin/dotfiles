@@ -1,7 +1,8 @@
-# login with tmux
-[[ -z "$TMUX" ]] && tmux -u
-
 export LANG=ja_JP.UTF-8
+
+# TMUX / If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
 
 # Get the aliases and functions
 if [ -f ~/.zshrc ]; then
