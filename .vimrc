@@ -154,5 +154,6 @@ endif
 :set write
 
 " ファイルタイプ関連を有効にする
+filetype on
 filetype plugin indent on
 syntax enable
