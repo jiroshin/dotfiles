@@ -31,7 +31,8 @@ setopt correct
 
 # Settings for fzf
 export PATH="$PATH:$HOME/.fzf/bin"
-export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_OPTS='--height 30% --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #mkdirとcdを同時にする
