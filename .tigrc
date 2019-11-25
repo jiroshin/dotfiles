@@ -6,16 +6,16 @@ set stage-view = text
 set log-view   = text
 set blob-view  = text
 set diff-view  = text:yes,commit-title-overflow=no
-
 set tab-size = 2
-
 set ignore-case = true
-
 set split-view-width = 80%
 set split-view-height = 80%
-
 set diff-options = -m --first-parent
-
 set refresh-mode = auto
+
+# Dでstatus viewのuntracked fileを削除できるようにする
+# https://github.com/jonas/tig/issues/31
+# https://github.com/jonas/tig/issues/393
+bind status D ?@rm %(file)
 
 color cursor black white bold
