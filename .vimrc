@@ -10,10 +10,6 @@ set fileformats=unix,dos,mac
 set ambiwidth=double
 set nobomb
 
-" 意図しない挙動を防ぐ
-filetype off
-filetype plugin indent off
-
 " スワップファイルの作成先を変更
 set noswapfile
 
@@ -30,14 +26,15 @@ highlight LineNr ctermfg=244
 " タイトル系
 set title
 
-" インデント幅
-set shiftwidth=2
+" インデント系
+filetype plugin indent on
+set expandtab
 set tabstop=2
-set ts=2
-
-"勝手にインデント系
+set softtabstop=2
 set autoindent
 set smartindent
+set shiftwidth=2
+au FileType go setlocal sw=4 ts=4 sts=4 noet
 
 " 挿入モードでバックスペースで削除できるようにする
 set backspace=indent,eol,start
@@ -47,13 +44,6 @@ set ignorecase
 
 " 検索した時にハイライト
 set hlsearch
-
-" 行が長くなった時に折り返しをしない
-" set nowrap
-
-" マウス操作を可能にする
-" set mouse=a
-
 
 " キーバインド------------------------------------------------------------------
 vnoremap x "_x
@@ -137,10 +127,5 @@ endif
 
 " ------------------------------------------------------------
 
-:set modifiable
-:set write
-
-" ファイルタイプ関連を有効にする
-filetype on
-filetype plugin indent on
-syntax enable
+syntax on
+colorscheme onedark
