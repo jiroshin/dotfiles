@@ -5,6 +5,13 @@ hook_add = '''
 	nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 30<CR>
 '''
 
+# A collection of language packs for Vim.
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+hook_add = '''
+  let g:polyglot_disabled = ['elm']
+'''
+
 # ウィンドウの幅をctr+eで調整
 [[plugins]]
 repo = 'simeji/winresizer'
@@ -95,6 +102,7 @@ repo = 'junegunn/fzf'
 hook_post_update = './install --all'
 merged = 0
 
+# fzf.vim
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'

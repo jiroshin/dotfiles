@@ -9,6 +9,7 @@ set fileencodings=utf-8,ucs-boms,euc-jp,ep932
 set fileformats=unix,dos,mac
 set ambiwidth=double
 set nobomb
+set t_Co=256
 
 " スワップファイルの作成先を変更
 set noswapfile
@@ -21,7 +22,6 @@ set belloff=all
 
 " 行番号系
 set number
-highlight LineNr ctermfg=244
 
 " タイトル系
 set title
@@ -126,6 +126,16 @@ if dein#check_install()
 endif
 
 " ------------------------------------------------------------
+
+" カラースキーム
+if (empty($TMUX))
+  if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
 syntax on
 colorscheme onedark

@@ -1,7 +1,7 @@
-export TERM=xterm-256color
-
 # oh-my-zsh使う
 source ~/dotfiles/.oh-my-zshrc
+
+export TERM=xterm-256color
 
 # PCごとに異なるパスやエイリアスを読み込む
 source ~/dotfiles/only-for-this-machine/main.sh
