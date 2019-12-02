@@ -53,9 +53,9 @@ alias brcopy='git symbolic-ref --short HEAD | pbcopy'
 
 # 移動系
 alias dot='cd ~/dotfiles'
-alias dev='cd ~/dev'
+alias dev='cd ~/Dev'
+alias lab='cd ~/Lab'
 alias desktop='cd ~/Desktop'
-alias m='cd ~/memo'
 
 #コマンド系
 alias railss='bin/rails s -b 0.0.0.0 -p 3000'
