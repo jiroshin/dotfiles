@@ -1,4 +1,6 @@
-# view settings
+#--------------------------------------------------------------#
+##        tig settings                                        ##
+#--------------------------------------------------------------#
 set main-view  = id:yes date:default,local=yes author commit-title:graph=yes,refs=yes,overflow=false
 set blame-view = date:default id:yes,color line-number:yes,interval=1 text
 set pager-view = text
@@ -13,9 +15,9 @@ set split-view-height = 80%
 set diff-options = -m --first-parent
 set refresh-mode = auto
 
-# Dでstatus viewのuntracked fileを削除できるようにする
-# https://github.com/jonas/tig/issues/31
-# https://github.com/jonas/tig/issues/393
+#--------------------------------------------------------------#
+##        Dでstatus viewのuntracked fileを削除                ##
+#--------------------------------------------------------------#
 bind status D ?@rm %(file)
 
 color cursor black white bold
