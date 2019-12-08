@@ -1,6 +1,12 @@
+"--------------------------------------------------------------
+"          shell                                            <<<
+"--------------------------------------------------------------
 set shell=/bin/zsh
+" <<<
 
-" encoding
+"--------------------------------------------------------------
+"          encoding & color                                 <<<
+"--------------------------------------------------------------
 set encoding=utf8
 scriptencoding utf8
 set fileencoding=utf-8
@@ -10,7 +16,11 @@ set fileformats=unix,dos,mac
 set ambiwidth=double
 set nobomb
 set t_Co=256
+" <<<
 
+"--------------------------------------------------------------
+"          Vim Options                                      <<<
+"--------------------------------------------------------------
 " スワップファイルの作成先を変更
 set noswapfile
 
@@ -26,16 +36,6 @@ set number
 " タイトル系
 set title
 
-" インデント系
-filetype plugin indent on
-set expandtab
-set tabstop=2
-set softtabstop=2
-set autoindent
-set smartindent
-set shiftwidth=2
-au FileType go setlocal sw=4 ts=4 sts=4 noet
-
 " 挿入モードでバックスペースで削除できるようにする
 set backspace=indent,eol,start
 
@@ -44,8 +44,24 @@ set ignorecase
 
 " 検索した時にハイライト
 set hlsearch
+" <<<
 
-" キーバインド------------------------------------------------------------------
+"--------------------------------------------------------------
+"          indent                                           <<<
+"--------------------------------------------------------------
+filetype plugin indent on
+set expandtab
+set tabstop=2
+set softtabstop=2
+set autoindent
+set smartindent
+set shiftwidth=2
+au FileType go setlocal sw=4 ts=4 sts=4 noet
+" <<<
+
+"--------------------------------------------------------------
+"          key bind                                         <<<
+"--------------------------------------------------------------
 vnoremap x "_x
 nnoremap x "_x
 nnoremap 1 ^
@@ -86,8 +102,11 @@ nnoremap sl <C-w>l
 nnoremap sh <C-w>h
 nnoremap ss :<C-u>sp<CR><C-w>j
 nnoremap sv :<C-u>vs<CR><C-w>l
+" <<<
 
-" plugin manager ---------------------------------------------
+"--------------------------------------------------------------
+"          plugin manager                                   <<<
+"--------------------------------------------------------------
 if &compatible
   set nocompatible
 endif
@@ -124,10 +143,11 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+" <<<
 
-" ------------------------------------------------------------
-
-" カラースキーム
+"--------------------------------------------------------------
+"          colorscheme                                      <<<
+"--------------------------------------------------------------
 if (empty($TMUX))
   if (has("nvim"))
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -139,3 +159,4 @@ endif
 
 syntax on
 colorscheme onedark
+" <<<
