@@ -1,11 +1,21 @@
-# oh-my-zsh使う
+#--------------------------------------------------------------#
+##        source oh-my-zsh                                    ##
+#--------------------------------------------------------------#
 source ~/dotfiles/.oh-my-zshrc
 
+#--------------------------------------------------------------#
+##        set 256color                                        ##
+#--------------------------------------------------------------#
 export TERM=xterm-256color
 
-# PCごとに異なるパスやエイリアスを読み込む
+#--------------------------------------------------------------#
+##        source each PC settings                             ##
+#--------------------------------------------------------------#
 source ~/dotfiles/only-for-this-machine/main.sh
 
+#--------------------------------------------------------------#
+##        zsh Options                                         ##
+#--------------------------------------------------------------#
 # zsh補完
 autoload -U compinit
 compinit
@@ -21,7 +31,6 @@ zstyle ':completion::complete:*' use-cache true
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 補完リストの表示間隔を狭くする
 setopt list_packed
-
 # cdなしでディレクトリを移動
 setopt auto_cd
 # cdでディレクトリの移動履歴表示
@@ -29,16 +38,22 @@ setopt auto_pushd
 # コマンドのうち間違え防止
 setopt correct
 
-# Settings for fzf
+#--------------------------------------------------------------#
+##        fzf settings                                        ##
+#--------------------------------------------------------------#
 export PATH="$PATH:$HOME/.fzf/bin"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_DEFAULT_OPTS='--height 30% --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#mkdirとcdを同時にする
+#--------------------------------------------------------------#
+##        functions                                           ##
+#--------------------------------------------------------------#
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-# alias
+#--------------------------------------------------------------#
+##        alias                                               ##
+#--------------------------------------------------------------#
 alias la='ls -a'
 alias ll='ls -l'
 alias gs='git status' # `git status`の確認
@@ -50,13 +65,11 @@ alias vi='vim'
 alias v='vim'
 alias t='tmux'
 alias brcopy='git symbolic-ref --short HEAD | pbcopy'
-
 # 移動系
 alias dot='cd ~/dotfiles'
 alias dev='cd ~/Dev'
 alias lab='cd ~/Lab'
 alias desktop='cd ~/Desktop'
-
 #コマンド系
 alias railss='bin/rails s -b 0.0.0.0 -p 3000'
 alias dcu='docker-compose up'
