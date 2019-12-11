@@ -70,6 +70,7 @@ alias dot='cd ~/dotfiles'
 alias dev='cd ~/Dev'
 alias lab='cd ~/Lab'
 alias desktop='cd ~/Desktop'
+alias ghfzf='cd `ghq list --full-path | fzf`'
 #コマンド系
 alias railss='bin/rails s -b 0.0.0.0 -p 3000'
 alias dcu='docker-compose up'
