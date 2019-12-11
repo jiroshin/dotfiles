@@ -18,11 +18,15 @@ brew update
 brew doctor
 echo 'complete: Install Homebrew'
 
-echo 'Installing git..'
+echo 'Installing git...'
 brew install git
 
-echo 'Installing openssl..'
+echo 'Installing openssl...'
 brew install openssl
+
+echo 'Installing ghq...'
+brew install ghq
+git config --global ghq.root ~/src
 
 #--------------------------------------------------------------#
 ##        Clean setting files                                 ##
