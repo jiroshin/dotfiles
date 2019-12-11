@@ -100,6 +100,9 @@ hook_add = '''
   highlight GitGutterChangeDelete ctermfg=yellow
 '''
 
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
 # fzf
 [[plugins]]
 repo = 'junegunn/fzf'
