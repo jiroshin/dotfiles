@@ -4,22 +4,24 @@
 source ~/dotfiles/.oh-my-zshrc
 
 #--------------------------------------------------------------#
-##        set 256color                                        ##
-#--------------------------------------------------------------#
-export TERM=xterm-256color
-
-#--------------------------------------------------------------#
 ##        source each PC settings                             ##
 #--------------------------------------------------------------#
 source ~/dotfiles/only-for-this-machine/main.sh
 
 #--------------------------------------------------------------#
+##        set 256color                                        ##
+#--------------------------------------------------------------#
+export TERM=xterm-256color
+
+#--------------------------------------------------------------#
 ##        zsh Options                                         ##
 #--------------------------------------------------------------#
+# bindkey -v
 # zsh補完
 autoload -U compinit
 compinit
-autoload -U colors
+# カラー設定
+autoload -Uz colors
 colors
 #単語の入力途中でもTab補完を有効化
 setopt complete_in_word
@@ -39,6 +41,16 @@ setopt auto_pushd
 setopt correct
 
 #--------------------------------------------------------------#
+##        set PROMPT                                          ##
+#--------------------------------------------------------------#
+# PROMPT="${fg[green]}%~ ${reset_color}$ "
+# autoload -Uz vcs_info
+# setopt prompt_subst
+# precmd_vcs_info() { vcs_info }
+# PROMPT="%~ (${fg[green]}${vcs_info_msg_0_}${reset_color}) $ "
+#
+
+#--------------------------------------------------------------#
 ##        fzf settings                                        ##
 #--------------------------------------------------------------#
 export PATH="$PATH:$HOME/.fzf/bin"
@@ -50,6 +62,17 @@ export FZF_DEFAULT_OPTS='--height 30% --border'
 ##        functions                                           ##
 #--------------------------------------------------------------#
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
+function ghq_fzf_repo() {
+  local remote_dir=$(ghq list | fzf)
+  if [ -n "$remote_dir" ]; then
+    BUFFER="cd ~/src/$remote_dir"
+    zle accept-line
+  fi
+  zle -R -c
+}
+zle -N ghq_fzf_repo
+bindkey '^]' ghq_fzf_repo
 
 #--------------------------------------------------------------#
 ##        alias                                               ##
@@ -70,7 +93,7 @@ alias dot='cd ~/dotfiles'
 alias dev='cd ~/Dev'
 alias lab='cd ~/Lab'
 alias desktop='cd ~/Desktop'
-alias ghfzf='cd `ghq list --full-path | fzf`'
+# alias ghfzf='cd `ghq list --full-path | fzf`'
 #コマンド系
 alias railss='bin/rails s -b 0.0.0.0 -p 3000'
 alias dcu='docker-compose up'
