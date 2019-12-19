@@ -1,0 +1,9 @@
+name: exec initialize.sh
+on: push
+jobs:
+  exec-initialize:
+    name: exec initialize
+    runs-on: macos-latest
+    steps:
+    - name: GET initialize.sh and exec
+      run: curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/initialize.sh | sh
