@@ -66,6 +66,7 @@ echo 'complete: git clone dotfiles'
 #--------------------------------------------------------------#
 ##        change shell and start                              ##
 #--------------------------------------------------------------#
+rm ~/.zshrc && ln -s ~/dotfiles/.zshrc ~/.zshrc
 sudo sh -c '/usr/local/bin/zsh >> /etc/shells'
 chsh -s /usr/local/bin/zsh
 zsh
@@ -77,7 +78,6 @@ echo 'start: setup Symbolic Links'
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.zprofile ~/.zprofile
-rm ~/.zshrc && ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vim ~/.vim 
 ln -s ~/dotfiles/.dein ~/.dein
 ln -s ~/dotfiles/.vimrc ~/.vimrc
