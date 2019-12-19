@@ -41,6 +41,13 @@ rm -r ~/.vim
 echo 'complete: Clean setting files'
 
 #--------------------------------------------------------------#
+##        git clone dotfiles                                  ##
+#--------------------------------------------------------------#
+echo 'start: git clone dotfiles'
+git clone https://github.com/jiroshin/dotfiles.git ~/dotfiles
+echo 'complete: git clone dotfiles'
+
+#--------------------------------------------------------------#
 ##        set Symbolic Links                                  ##
 #--------------------------------------------------------------#
 echo 'start: setup Symbolic Links'
