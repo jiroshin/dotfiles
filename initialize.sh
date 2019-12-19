@@ -30,6 +30,10 @@ brew update
 brew doctor
 echo 'complete: Install Homebrew'
 
+echo 'Installing zsh...'
+brew install zsh
+brew install zsh-completion
+
 echo 'Installing git...'
 brew install git
 
@@ -58,6 +62,13 @@ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | 
 echo 'start: git clone dotfiles'
 git clone https://github.com/jiroshin/dotfiles.git ~/dotfiles
 echo 'complete: git clone dotfiles'
+
+#--------------------------------------------------------------#
+##        change shell and start                              ##
+#--------------------------------------------------------------#
+sudo sh -c '/usr/local/bin/zsh >> /etc/shells'
+chsh -s /usr/local/bin/zsh
+zsh
 
 #--------------------------------------------------------------#
 ##        set Symbolic Links                                  ##
