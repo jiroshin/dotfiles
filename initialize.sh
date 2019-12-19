@@ -43,6 +43,10 @@ git config --global ghq.root ~/src
 echo 'Installing fzf...'
 brew install fzf
 
+echo 'Installing alacritty...'
+brew cask install alacritty
+[ -f ~/.config/alacritty/alacritty.yml ] && rm ~/.config/alacritty/alacritty.yml
+
 #--------------------------------------------------------------#
 ##       others install                                       ##
 #--------------------------------------------------------------
@@ -68,5 +72,6 @@ ln -s ~/dotfiles/.dein ~/.dein
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.tigrc ~/.tigrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 source ~/.zshrc
 echo 'complete: setup Symbolic Links'
