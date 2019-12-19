@@ -68,6 +68,5 @@ ln -s ~/dotfiles/.dein ~/.dein
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.tigrc ~/.tigrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 source ~/.zshrc
 echo 'complete: setup Symbolic Links'
