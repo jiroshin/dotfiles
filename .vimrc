@@ -66,8 +66,8 @@ vnoremap x "_x
 nnoremap x "_x
 nnoremap 1 ^
 nnoremap 2 $
-nnoremap <silent> , :bprev<CR>
-nnoremap <silent> . :bnext<CR>
+nnoremap <silent> 9 :bprev<CR>
+nnoremap <silent> 0 :bnext<CR>
 nnoremap \ :%s/old/new/g<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 nnoremap bd :bd<CR>
 
