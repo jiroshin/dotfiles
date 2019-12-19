@@ -9,8 +9,11 @@ settings for
 and...
 
 ## Usage
-1. git clone this repository
-2. execute initialize.sh
+run command.
+
+```sh:terminal
+$ curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/initialize.sh | sh
+```
 
 ## Memo
 - 2019/11/27 Vimを中心にdotfilesの内容を紹介する記事を書きました。  

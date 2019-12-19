@@ -45,7 +45,7 @@ brew install fzf
 
 echo 'Installing alacritty...'
 brew cask install alacritty
-[ -f ~/.config/alacritty/alacritty.yml ] && rm ~/.config/alacritty/alacritty.yml
+[ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
 
 #--------------------------------------------------------------#
 ##       others install                                       ##
