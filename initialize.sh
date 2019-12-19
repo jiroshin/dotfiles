@@ -1,5 +1,5 @@
 #!/bin/sh
-echo 'HELLO! from  initialize.sh'
+echo 'HELLO! from initialize.sh'
 cd ~
 
 #--------------------------------------------------------------#
@@ -10,7 +10,19 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 echo 'complete: setup os settings'
 
 #--------------------------------------------------------------#
-##        HomeBrew                                            ##
+##        Clean setting files                                 ##
+#--------------------------------------------------------------#
+echo 'start: Clean setting files'
+[ -f ~/.zshrc ] && rm ~/.zshrc
+[ -f ~/.zprofile ] && rm ~/.zprofile
+[ -f ~/.bashrc ] && rm ~/.bashrc
+[ -f ~/.bash_profile ] && rm ~/.bash_profile
+[ -f ~/.vimrc ] && rm ~/.vimrc
+[ -d ~/.vim ] && rm -r ~/.vim
+echo 'complete: Clean setting files'
+
+#--------------------------------------------------------------#
+##        HomeBrew install                                    ##
 #--------------------------------------------------------------#
 echo 'start: Install HomeBrew'
 /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
@@ -28,17 +40,13 @@ echo 'Installing ghq...'
 brew install ghq
 git config --global ghq.root ~/src
 
+echo 'Installing fzf...'
+brew install fzf
+
 #--------------------------------------------------------------#
-##        Clean setting files                                 ##
-#--------------------------------------------------------------#
-echo 'start: Clean setting files'
-rm ~/.zshrc
-rm ~/.zprofile
-rm ~/.bashrc
-rm ~/.bash_profile
-rm ~/.vimrc
-rm -r ~/.vim
-echo 'complete: Clean setting files'
+##       others install                                       ##
+#--------------------------------------------------------------
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 #--------------------------------------------------------------#
 ##        git clone dotfiles                                  ##
@@ -61,6 +69,5 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.tigrc ~/.tigrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
-source ~/.bash_profile
 source ~/.zshrc
 echo 'complete: setup Symbolic Links'

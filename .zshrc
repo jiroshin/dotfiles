@@ -1,12 +1,12 @@
 #--------------------------------------------------------------#
 ##        source oh-my-zsh                                    ##
 #--------------------------------------------------------------#
-source ~/dotfiles/.oh-my-zshrc
+[ -d ~/.oh-my-zsh ] && source ~/dotfiles/.oh-my-zshrc
 
 #--------------------------------------------------------------#
 ##        source each PC settings                             ##
 #--------------------------------------------------------------#
-source ~/dotfiles/only-for-this-machine/main.sh
+[ -f ~/dotfiles/only-for-this-machine/main.sh ] && source ~/dotfiles/only-for-this-machine/main.sh
 
 #--------------------------------------------------------------#
 ##        set 256color                                        ##
