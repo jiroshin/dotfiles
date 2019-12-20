@@ -67,7 +67,6 @@ echo 'complete: git clone dotfiles'
 ##        change shell and start                              ##
 #--------------------------------------------------------------#
 rm ~/.zshrc && ln -s ~/dotfiles/.zshrc ~/.zshrc
-sudo sh -c '/usr/local/bin/zsh >> /etc/shells'
 chsh -s /usr/local/bin/zsh
 zsh
 
