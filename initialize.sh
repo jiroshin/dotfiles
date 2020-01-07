@@ -47,6 +47,9 @@ git config --global ghq.root ~/src
 echo 'Installing fzf...'
 brew install fzf
 
+echo 'Installing others...'
+brew install reattach-to-user-namespace
+
 echo 'Installing alacritty...'
 brew cask install alacritty
 [ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
