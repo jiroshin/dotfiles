@@ -102,6 +102,10 @@ nnoremap sl <C-w>l
 nnoremap sh <C-w>h
 nnoremap ss :<C-u>sp<CR><C-w>j
 nnoremap sv :<C-u>vs<CR><C-w>l
+
+" terminal mode
+" USAGE) <C-y>: change mode to job-mode, i: back to teminal-normal-mode
+tmap <C-y> <c-\><c-n>
 " <<<
 
 "--------------------------------------------------------------
