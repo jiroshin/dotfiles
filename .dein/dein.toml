@@ -9,6 +9,10 @@ hook_add = '''
   nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 30<CR>
 '''
 
+# enable tmux to use autoread
+[[plugins]]
+repo = 'tmux-plugins/vim-tmux-focus-events'
+
 # A collection of language packs for Vim.
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
