@@ -44,6 +44,9 @@ set ignorecase
 
 " 検索した時にハイライト
 set hlsearch
+
+" auto read
+set autoread
 " <<<
 
 "--------------------------------------------------------------
