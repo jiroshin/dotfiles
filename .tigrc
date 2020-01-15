@@ -18,10 +18,9 @@ set refresh-mode = auto
 #--------------------------------------------------------------#
 ##        key bind                                            ##
 #--------------------------------------------------------------#
-bind generic C !git commit
-bind generic F !git fetch %(remote)
-bind generic U !git pull %(remote)
-bind generic P !git push origin %(repo:head)
+bind generic F ?@!git fetch %(remote)
+bind generic U ?@!git pull %(remote)
+bind generic P ?@!git push origin %(repo:head)
 
 #--------------------------------------------------------------#
 ##        Dでstatus viewのuntracked fileを削除                ##
