@@ -21,10 +21,6 @@ set refresh-mode = auto
 bind generic F ?@!git fetch %(remote)
 bind generic U ?@!git pull %(remote)
 bind generic P ?@!git push origin %(repo:head)
-
-#--------------------------------------------------------------#
-##        Dでstatus viewのuntracked fileを削除                ##
-#--------------------------------------------------------------#
 bind status D ?@rm %(file)
 
 color cursor black white bold
