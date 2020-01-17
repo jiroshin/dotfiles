@@ -16,6 +16,7 @@ fi
 #--------------------------------------------------------------#
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick@6/6.9.10-27/lib/pkgconfig
+export GOENV_DISABLE_GOPATH=1
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 # version management
