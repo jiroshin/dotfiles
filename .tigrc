@@ -18,9 +18,9 @@ set refresh-mode = auto
 #--------------------------------------------------------------#
 ##        key bind                                            ##
 #--------------------------------------------------------------#
-bind generic F ?@!git fetch %(remote)
-bind generic U ?@!git pull %(remote)
-bind generic P ?@!git push origin %(repo:head)
+bind generic F ?!git fetch %(remote)
+bind generic U ?!git pull %(remote)
+bind generic P ?!git push origin %(repo:head)
 bind status D ?@rm %(file)
 
 color cursor black white bold
