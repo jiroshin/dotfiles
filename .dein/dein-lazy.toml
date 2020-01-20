@@ -61,3 +61,19 @@ hook_add = '''
   let g:closetag_emptyTags_caseSensitive=1
   let g:closetag_shortcut='>'
 '''
+
+# Go  
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+hook_add = '''
+  let g:go_fmt_autosave = 1
+  let g:go_fmt_command = "goimports"
+  let g:go_def_mapping_enabled = 0
+  let g:go_doc_keywordprg_enabled = 0
+  let g:go_metalinter_enabled = 0
+  let g:go_code_completion_enabled = 0
+  let g:go_gocode_unimported_packages = 0
+  let g:go_def_mode='gopls'
+  let g:go_info_mode='gopls'
+'''

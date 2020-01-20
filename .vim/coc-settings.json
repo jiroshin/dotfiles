@@ -2,34 +2,12 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": [
-        "go.mod"
-      ],
-      "filetypes": [
-        "go"
-      ]
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
     },
-    "dockerfile": {
-      "command": "docker-langserver",
-      "filetypes": [
-        "dockerfile"
-      ],
-      "args": [
-        "--stdio"
-      ]
-    },
-    "bash": {
-      "command": "bash-language-server",
-      "args": [
-        "start"
-      ],
-      "filetypes": [
-        "sh"
-      ],
-      "ignoredRootPaths": [
-        "~"
-      ]
-    }
   },
   "eslint.enable": true,
   "eslint.autoFixOnSave": true,
