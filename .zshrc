@@ -77,6 +77,7 @@ bindkey '^]' ghq_fzf_repo
 #--------------------------------------------------------------#
 ##        alias                                               ##
 #--------------------------------------------------------------#
+alias sl='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias gs='git status' # `git status`の確認
