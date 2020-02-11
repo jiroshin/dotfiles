@@ -50,6 +50,10 @@ brew install fzf
 echo 'Installing others...'
 brew install reattach-to-user-namespace
 
+# vimで使うアイコンのフォントたち
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+
 echo 'Installing alacritty...'
 brew cask install alacritty
 [ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
