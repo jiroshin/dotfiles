@@ -2,12 +2,17 @@
 ##        dein.toml                                           ##
 #--------------------------------------------------------------#
 
+# directory tree
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'preservim/nerdtree'
 hook_add = '''
   let NERDTreeShowHidden=1
   nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 30<CR>
 '''
+
+# icons
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
 
 # enable tmux to use autoread
 [[plugins]]
