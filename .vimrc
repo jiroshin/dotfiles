@@ -74,10 +74,14 @@ nnoremap 1 ^
 nnoremap 2 $
 nnoremap <silent> 9 :bprev<CR>
 nnoremap <silent> 0 :bnext<CR>
-nnoremap \ :%s/old/new/g<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 nnoremap bd :bd<CR>
 
 " 括弧の補完
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+
+" 関数括弧の補完
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
