@@ -13,14 +13,6 @@ repo = 'prettier/vim-prettier'
 on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.tsx']
 do = 'yarn install'
 
-# emmet
-[[plugins]]
-repo = 'mattn/emmet-vim'
-on_ft = ['html', 'xhtml', 'javascript.jsx', 'typescript.tsx']
-hook_add = '''
-  let g:user_emmet_leader_key='<C-e>'
-'''
-
 # autoclose html(xhtml) tags
 [[plugins]]
 repo = 'alvan/vim-closetag'
