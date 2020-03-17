@@ -15,6 +15,7 @@ set split-view-height = 80%
 set diff-options = -m --first-parent
 set refresh-mode = auto
 set wrap-lines = true
+set editor-line-number = true
 
 #--------------------------------------------------------------#
 ##        key bind                                            ##
