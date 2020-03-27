@@ -1,0 +1,15 @@
+# highlight
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript', 'typescript.tsx']
+
+# prettier coc.nvimのcoc-prettierを使うのもアリかも
+[[plugins]]
+repo = 'prettier/vim-prettier'
+on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.tsx']
+do = 'yarn install'
+
+# styled-components
+[[plugins]]
+repo = 'styled-components/vim-styled-components'
+on_ft = ['javascript.jsx', 'typescript.tsx']

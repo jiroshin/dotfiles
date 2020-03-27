@@ -140,15 +140,22 @@ endif
 
 " tomlセット
 let s:toml_dir=expand('~/.dein/')
-let s:toml=s:toml_dir . 'dein.toml'
-let s:toml_lazy=s:toml_dir . 'dein-lazy.toml'
 
 " プラグインのロード
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
-  call dein#load_toml(s:toml)
-  call dein#load_toml(s:toml_lazy, {'lazy': 1})
+  " load plugins instantly
+  let s:instantlyFiles = glob(s:toml_dir . 'instantly-load/*.toml')
+  for file in split(s:instantlyFiles, "\n")
+    call dein#load_toml(file)
+  endfor
+
+  " load plugins lazy
+  let s:lazyFiles = glob(s:toml_dir . 'lazy-load/*.toml')
+  for file in split(s:lazyFiles, "\n")
+    call dein#load_toml(file, { 'lazy': 1 })
+  endfor
 
   call dein#end()
   call dein#save_state()
