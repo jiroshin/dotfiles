@@ -2,4 +2,4 @@
 .vim/plugged
 .vim/.netrwhist  
 .vim/.tags
-only-for-this-machine/main.sh
+secret/main.sh

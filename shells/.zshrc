@@ -6,7 +6,7 @@
 #--------------------------------------------------------------#
 ##        source each PC settings                             ##
 #--------------------------------------------------------------#
-[ -f ~/dotfiles/only-for-this-machine/main.sh ] && source ~/dotfiles/only-for-this-machine/main.sh
+[ -f ~/dotfiles/secret/main.sh ] && source ~/dotfiles/secret/main.sh
 
 #--------------------------------------------------------------#
 ##        set 256color                                        ##
