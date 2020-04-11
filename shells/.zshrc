@@ -66,7 +66,7 @@ function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 function ghq_fzf_repo() {
   local remote_dir=$(ghq list | fzf)
   if [ -n "$remote_dir" ]; then
-    BUFFER="cd ~/src/$remote_dir"
+    BUFFER="cd ~/ghq/$remote_dir"
     zle accept-line
   fi
   zle -R -c
