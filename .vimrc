@@ -24,8 +24,8 @@ set t_Co=256
 " スワップファイルの作成先を変更
 set noswapfile
 
-" ヤンクをクリップボードへ繋ぐ
-set clipboard+=unnamed
+" ヤンクに*レジスタを使う
+set clipboard=unnamed
 
 " ビープ音を消す
 set belloff=all
