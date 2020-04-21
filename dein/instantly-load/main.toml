@@ -96,7 +96,7 @@ hook_add = '''
   \ <bang>0)
   nnoremap <C-g> :Rg<Space>
   nnoremap <C-p> :GFiles<CR>
-  nnoremap <C-i> :Files<CR>
+  nnoremap <C-l> :Files<CR>
   nnoremap <C-h> :History<CR>
 '''
 
