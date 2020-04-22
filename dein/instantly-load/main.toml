@@ -154,6 +154,14 @@ hook_add = '''
   let g:ale_go_langserver_executable = 'gopls'
 '''
 
+# graphical undo tree
+[[plugins]]
+repo = 'sjl/gundo.vim'
+hook_add = '''
+  let g:gundo_prefer_python3 = 1
+'''
+
+
 #--------------------------------------------------------------#
 ##        LSP                                                 ##
 #--------------------------------------------------------------#
