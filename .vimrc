@@ -66,7 +66,7 @@ au FileType go setlocal sw=4 ts=4 sts=4 noet
 " <<<
 
 "--------------------------------------------------------------
-"          key bind                                         <<<
+"          key mapping                                      <<<
 "--------------------------------------------------------------
 vnoremap x "_x
 nnoremap x "_x
@@ -95,6 +95,9 @@ imap <C-f> <Right>
 " visulaモードで選択してからのインデント調整で調整後に選択範囲を開放しない
 vnoremap > >gv
 vnoremap < <gv
+
+" 文字列置換のショートカット
+cnoremap s<CR> %s///gc<LEFT><LEFT><LEFT>
 
 " 画面分割系
 nnoremap sj <C-w>j
