@@ -97,7 +97,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " 文字列置換のショートカット
-cnoremap S %s///gc<LEFT><LEFT><LEFT>
+cnoremap S<CR> %s///gc<LEFT><LEFT><LEFT>
 
 " 画面分割系
 nnoremap sj <C-w>j
