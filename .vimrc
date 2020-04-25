@@ -70,10 +70,6 @@ au FileType go setlocal sw=4 ts=4 sts=4 noet
 "--------------------------------------------------------------
 vnoremap x "_x
 nnoremap x "_x
-nnoremap 1 ^
-nnoremap 2 $
-nnoremap <silent> 9 :bprev<CR>
-nnoremap <silent> 0 :bnext<CR>
 nnoremap bd :bd<CR>
 
 " 括弧の補完
@@ -95,11 +91,6 @@ imap <C-p> <Up>
 imap <C-n> <Down>
 imap <C-b> <Left>
 imap <C-f> <Right>
-imap <C-a> <C-o>:call <SID>home()<CR>
-imap <C-e> <End>
-imap <C-d> <Del>
-imap <C-h> <BS>
-imap <C-k> <C-r>=<SID>kill()<CR>
 
 " visulaモードで選択してからのインデント調整で調整後に選択範囲を開放しない
 vnoremap > >gv
