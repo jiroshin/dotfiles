@@ -42,13 +42,13 @@ brew install openssl
 
 echo 'Installing ghq...'
 brew install ghq
-git config --global ghq.root ~/src
 
 echo 'Installing fzf...'
 brew install fzf
 
 echo 'Installing others...'
 brew install reattach-to-user-namespace
+brew install github/gh/gh
 
 # vimで使うアイコンのフォントたち
 brew tap homebrew/cask-fonts
