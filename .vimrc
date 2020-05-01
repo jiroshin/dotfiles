@@ -173,5 +173,5 @@ if (empty($TMUX))
 endif
 
 syntax on
-colorscheme torte
+colorscheme onedark
 " <<<
