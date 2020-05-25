@@ -91,6 +91,7 @@ alias v='vim'
 alias t='tmux'
 alias brcopy='git symbolic-ref --short HEAD | pbcopy'
 alias ghop='gh repo view --web'
+alias ringo='open -a Simulator'
 # 移動系
 alias dot='cd ~/dotfiles'
 alias dev='cd ~/Dev'
