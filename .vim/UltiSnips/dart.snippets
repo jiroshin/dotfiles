@@ -1,0 +1,24 @@
+snippet stl "[Snippet] Stateless Widget"
+class ${1:ClassName} extends StatelessWidget {
+  const $1({ Key key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  } 
+}
+endsnippet
+
+snippet stf "[Snippet] Stateful Widget"
+class ${1:ClassName} extends StatefulWidget {
+	@override
+	_$1State createState() => _$1State();
+} 
+
+class _$1State extends State<$1> {
+	@override
+	Widget build(BuildContext context) {
+		return Container();
+	}
+}
+endsnippet
