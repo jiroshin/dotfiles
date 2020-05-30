@@ -155,8 +155,10 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'SirVer/ultisnips'
 hook_add = '''
-  let g:gundo_prefer_python3 = 1
+  let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+  let g:UltiSnipsExpandTrigger="<Down>"
 '''
 
 
