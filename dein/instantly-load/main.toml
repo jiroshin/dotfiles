@@ -155,6 +155,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'honza/vim-snippets'
+
+[[plugins]]
 repo = 'SirVer/ultisnips'
 hook_add = '''
   let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
