@@ -7,7 +7,7 @@ set shell=/bin/zsh
 "--------------------------------------------------------------
 "          encoding & color                                 <<<
 "--------------------------------------------------------------
-set encoding=utf8
+set encoding=UTF-8
 scriptencoding utf8
 set fileencoding=utf-8
 set termencoding=utf8
