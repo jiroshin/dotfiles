@@ -61,7 +61,7 @@ brew cask install alacritty
 #--------------------------------------------------------------#
 ##       others install                                       ##
 #--------------------------------------------------------------
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+# curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 #--------------------------------------------------------------#
 ##        git clone dotfiles                                  ##
