@@ -18,11 +18,9 @@ TERM=xterm-256color
 #--------------------------------------------------------------#
 # bindkey -v
 # zsh補完
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
 # カラー設定
-autoload -Uz colors
-colors
+autoload -Uz colors && colors
 #単語の入力途中でもTab補完を有効化
 setopt complete_in_word
 # 補完候補をハイライト
@@ -43,12 +41,12 @@ setopt correct
 #--------------------------------------------------------------#
 ##        set PROMPT                                          ##
 #--------------------------------------------------------------#
-# PROMPT="${fg[green]}%~ ${reset_color}$ "
-# autoload -Uz vcs_info
-# setopt prompt_subst
-# precmd_vcs_info() { vcs_info }
-# PROMPT="%~ (${fg[green]}${vcs_info_msg_0_}${reset_color}) $ "
-#
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+PROMPT='%t %{$fg[cyan]%}%~%{$reset_color%} %{$fg[green]%}'\$vcs_info_msg_0_'%{$reset_color%} %{$fg[cyan]%}(^o^)/%{$reset_color%} '
+zstyle ':vcs_info:git:*' formats '%b'
 
 #--------------------------------------------------------------#
 ##        fzf settings                                        ##
