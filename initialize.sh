@@ -61,7 +61,6 @@ brew cask install alacritty
 #--------------------------------------------------------------#
 ##       others install                                       ##
 #--------------------------------------------------------------
-# curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 #--------------------------------------------------------------#
 ##        git clone dotfiles                                  ##
@@ -73,7 +72,8 @@ echo 'complete: git clone dotfiles'
 #--------------------------------------------------------------#
 ##        change shell and start                              ##
 #--------------------------------------------------------------#
-rm ~/.zshrc && ln -s ~/dotfiles/shells/.zshrc ~/.zshrc
+mkdir ~./zshrc
+ln -s ~/dotfiles/shells/.zshrc ~/.zshrc
 chsh -s /usr/local/bin/zsh
 zsh
 
