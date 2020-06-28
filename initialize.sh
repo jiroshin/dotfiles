@@ -74,7 +74,8 @@ echo 'complete: git clone dotfiles'
 #--------------------------------------------------------------#
 cp ~/dotfiles/shells/.zshrc ~/.zshrc
 ln -s ~/dotfiles/shells/.zshrc ~/.zshrc
-which zsh
+echo "debug"
+echo which zsh
 chsh -s /usr/local/bin/zsh
 zsh
 
