@@ -29,17 +29,6 @@ repo = 'tmux-plugins/vim-tmux-focus-events'
 [[plugins]]
 repo = 'simeji/winresizer'
 
-# インデント
-[[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
-hook_add = '''
-  let g:indent_guides_enable_on_vim_startup = 1
-  let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-  let g:indent_guides_auto_colors = 0
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=237
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
-'''
-
 # コメントアウト
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
