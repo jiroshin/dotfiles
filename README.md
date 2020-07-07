@@ -1,5 +1,5 @@
 # jiroshin's dotfiles 🐜
-![test exec initialize.sh](https://github.com/jiroshin/dotfiles/workflows/test%20exec%20initialize.sh/badge.svg)
+![initialize.sh](https://github.com/jiroshin/dotfiles/workflows/initialize.sh/badge.svg)
 
 ## Contents
 settings for   
