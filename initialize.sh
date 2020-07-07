@@ -72,7 +72,6 @@ echo 'complete: git clone dotfiles'
 #--------------------------------------------------------------#
 ##        change shell and start                              ##
 #--------------------------------------------------------------#
-cp ~/dotfiles/shells/.zshrc ~/.zshrc
 ln -s ~/dotfiles/shells/.zshrc ~/.zshrc
 chmod 755 /usr/local/share/zsh/site-functions
 chmod 755 /usr/local/share/zsh
