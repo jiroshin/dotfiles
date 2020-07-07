@@ -45,8 +45,11 @@ autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-PROMPT='%t %{$fg[cyan]%}%~%{$reset_color%} %{$fg[green]%}'\$vcs_info_msg_0_'%{$reset_color%} %{$fg[cyan]%}(^o^)/%{$reset_color%} '
-zstyle ':vcs_info:git:*' formats '%b'
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' formats '%b' '%c%u'
+zstyle ':vcs_info:git:*' stagedstr "+"
+zstyle ':vcs_info:git:*' unstagedstr "*"
+PROMPT='%t %{$fg[cyan]%}%~%{$reset_color%} %{$fg[green]%}'\$vcs_info_msg_0_'%{$reset_color%}%{$fg[magenta]%}'\$vcs_info_msg_1_'%{$reset_color%} %{$fg[cyan]%}(^o^)/%{$reset_color%} '
 
 #--------------------------------------------------------------#
 ##        fzf settings                                        ##
