@@ -50,6 +50,9 @@ set autoread
 
 " マウスを有効化
 set mouse=a
+
+" 折り畳みしない
+set foldlevel=50
 " <<<
 
 "--------------------------------------------------------------
@@ -63,6 +66,7 @@ set autoindent
 set smartindent
 set shiftwidth=2
 au FileType go setlocal sw=4 ts=4 sts=4 noet
+set list listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 " <<<
 
 "--------------------------------------------------------------
