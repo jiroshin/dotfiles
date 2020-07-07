@@ -6,9 +6,8 @@ jobs:
     name: exec initialize.sh
     runs-on: macos-latest
     steps:
-    - name: GET initialize.sh and exec
-      run: curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/initialize.sh | sh
-    steps:
-    - uses: actions/checkout@v2
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+      - name: GET initialize.sh and exec
+        run: curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/initialize.sh | sh
+      - uses: actions/checkout@v2
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v2
