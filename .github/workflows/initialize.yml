@@ -7,4 +7,4 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: GET initialize.sh and exec
-        run: curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/initialize.sh | sh
+        run: curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/fix/github-actions/initialize.sh | sh
