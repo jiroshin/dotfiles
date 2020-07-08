@@ -89,6 +89,7 @@ alias gca='git commit --amend' #　前のコミットの編集
 alias glo='git log --oneline' # コミットログを各一行で読む
 alias vi='vim'
 alias v='vim'
+alias v.='vim .'
 alias t='tmux'
 alias brcopy='git symbolic-ref --short HEAD | pbcopy'
 alias ghop='gh repo view --web'
