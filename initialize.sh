@@ -68,6 +68,8 @@ brew cask install alacritty
 echo 'start: git clone dotfiles'
 git clone https://github.com/jiroshin/dotfiles.git ~/dotfiles
 echo 'complete: git clone dotfiles'
+chmod 755 ~/dotfiles/tmux/tmuxbins/wifi
+chmod 755 ~/dotfiles/tmux/tmuxbins/battery
 
 #--------------------------------------------------------------#
 ##        change shell and start                              ##
@@ -88,7 +90,7 @@ ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/dein ~/dein
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.tigrc ~/.tigrc
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/alacritty.yml ~/.alacritty.yml
 source ~/.zshrc
 echo 'complete: setup Symbolic Links'
