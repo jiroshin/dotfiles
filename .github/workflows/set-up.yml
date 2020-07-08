@@ -1,0 +1,11 @@
+name: mac-setup.sh
+on: push
+
+jobs:
+  exec-mac-setup:
+    name: exec mac-setup.sh
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - name: GET mac-setup.sh and exec
+        run: curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/mac-setup.sh | sh

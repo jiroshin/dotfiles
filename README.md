@@ -10,10 +10,10 @@ settings for
 and...
 
 ## Usage
-run command.
 
+### macOS
 ```sh:terminal
-$ curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/initialize.sh | sh
+$ curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/mac-setup.sh | sh
 ```
 
 ## Memo
