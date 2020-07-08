@@ -1,5 +1,4 @@
 # jiroshin's dotfiles 🐜
-![initialize.sh](https://github.com/jiroshin/dotfiles/workflows/initialize.sh/badge.svg)
 
 ## Contents
 settings for   
