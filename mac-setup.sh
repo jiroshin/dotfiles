@@ -87,8 +87,8 @@ ln -s ~/dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/dotfiles/vim/.vim ~/.vim 
 ln -s ~/dotfiles/vim/dein ~/dein
 ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.tigrc ~/.tigrc
+ln -s ~/dotfiles/tig/.tigrc ~/.tigrc
 ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/alacritty.yml ~/.alacritty.yml
+ln -s ~/dotfiles/alacritty/alacritty.yml ~/.alacritty.yml
 source ~/.zshrc
 echo 'complete: setup Symbolic Links'
