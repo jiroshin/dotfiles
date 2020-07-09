@@ -1,5 +1,5 @@
-.vim/bundles
-.vim/plugged
-.vim/.netrwhist  
-.vim/.tags
+vim/.vim/bundles
+vim/.vim/plugged
+vim/.vim/.netrwhist  
+vim/.vim/.tags
 local/*

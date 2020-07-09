@@ -84,9 +84,9 @@ echo 'start: setup Symbolic Links'
 ln -s ~/dotfiles/bash/.bash_profile ~/.bash_profile
 ln -s ~/dotfiles/bash/.bashrc ~/.bashrc
 ln -s ~/dotfiles/zsh/.zprofile ~/.zprofile
-ln -s ~/dotfiles/.vim ~/.vim 
-ln -s ~/dotfiles/dein ~/dein
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/vim/.vim ~/.vim 
+ln -s ~/dotfiles/vim/dein ~/dein
+ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.tigrc ~/.tigrc
 ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/alacritty.yml ~/.alacritty.yml
