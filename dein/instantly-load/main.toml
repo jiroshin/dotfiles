@@ -18,13 +18,6 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 repo = 'tmux-plugins/vim-tmux-focus-events'
 
-# A collection of language packs for Vim.
-# [[plugins]]
-# repo = 'sheerun/vim-polyglot'
-# hook_add = '''
-#   let g:polyglot_disabled = ['elm']
-# '''
-
 # ウィンドウの幅をctr+eで調整
 [[plugins]]
 repo = 'simeji/winresizer'
@@ -96,53 +89,6 @@ hook_add = '''
   let g:rainbow_active = 1
 '''
 
-# linters
-# [[plugins]]
-# repo = 'dense-analysis/ale'
-# hook_add = '''
-#   let g:ale_set_highlights = 0
-#   let g:ale_lint_on_enter=1
-#   let g:ale_lint_on_save=1
-#   let g:ale_lint_on_text_changed=0
-#   let g:ale_sign_column_always=1
-#   let g:ale_linters = {
-#     \ 'bash': ['shellcheck'],
-#     \ 'css': ['stylelint', 'prettier'],
-#     \ 'dockerfile': ['hadolint'],
-#     \ 'erb': ['erb'],
-#     \ 'go': [],
-#     \ 'graphql': ['eslint'],
-#     \ 'html': ['HTMLHint'],
-#     \ 'haml': ['haml-lint'],
-#     \ 'javascript': ['eslint'],
-#     \ 'json': ['jq'],
-#     \ 'make': ['checkmake'],
-#     \ 'markdown': ['prettier', 'textlint'],
-#     \ 'python': ['pylint'],
-#     \ 'ruby': ['rubocop', 'solargraph'],
-#     \ 'rust': ['cargo', 'rustfmt'],
-#     \ 'sass': ['sass-lint'],
-#     \ 'scss': ['sass-lint'],
-#     \ 'SQL': ['sqlint', 'sqlfmt'],
-#     \ 'swift': ['swiftlint'],
-#     \ 'typescript': ['eslint'],
-#     \ 'vim': ['vint'],
-#     \ 'yaml': ['yamllint'],
-#     \ }
-#   let g:ale_sign_error='E'
-#   let g:ale_sign_warning='W'
-#   let g:ale_echo_msg_error_str='E'
-#   let g:ale_echo_msg_warning_str='W'
-#   let g:ale_echo_msg_format='[%linter%] %s (%severity%)'
-#   let g:ale_statusline_format=['E %d', 'W %d', '']
-#   let g:ale_open_list=1
-#   let g:ale_set_loclist=0
-#   let g:ale_set_quickfix=0 " NOT use QuickFix
-#   let g:ale_keep_list_window_open=0
-#   let g:ale_javascript_prettier_use_local_config=1
-#   let g:ale_go_langserver_executable = 'gopls'
-# '''
-
 [[plugins]]
 repo = 'honza/vim-snippets'
 
@@ -153,12 +99,9 @@ hook_add = '''
   let g:UltiSnipsExpandTrigger="<Down>"
 '''
 
-
 #--------------------------------------------------------------#
 ##        LSP                                                 ##
 #--------------------------------------------------------------#
-# completionでなんかエラー発生するのでコメントアウト
-# inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
