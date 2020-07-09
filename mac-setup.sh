@@ -1,6 +1,5 @@
 #!/bin/sh
 cd ~
-
 #--------------------------------------------------------------#
 ##        OS settings                                         ##
 #--------------------------------------------------------------#
@@ -73,7 +72,7 @@ chmod 755 ~/dotfiles/tmux/tmuxbins/battery
 #--------------------------------------------------------------#
 ##        change shell and start                              ##
 #--------------------------------------------------------------#
-ln -s ~/dotfiles/shells/.zshrc ~/.zshrc
+ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 chmod 755 /usr/local/share/zsh/site-functions
 chmod 755 /usr/local/share/zsh
 zsh
@@ -82,9 +81,9 @@ zsh
 ##        set Symbolic Links                                  ##
 #--------------------------------------------------------------#
 echo 'start: setup Symbolic Links'
-ln -s ~/dotfiles/shells/.bash_profile ~/.bash_profile
-ln -s ~/dotfiles/shells/.bashrc ~/.bashrc
-ln -s ~/dotfiles/shells/.zprofile ~/.zprofile
+ln -s ~/dotfiles/bash/.bash_profile ~/.bash_profile
+ln -s ~/dotfiles/bash/.bashrc ~/.bashrc
+ln -s ~/dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/dotfiles/.vim ~/.vim 
 ln -s ~/dotfiles/dein ~/dein
 ln -s ~/dotfiles/.vimrc ~/.vimrc
