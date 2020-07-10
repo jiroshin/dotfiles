@@ -137,7 +137,7 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 " tomlセット
-let s:toml_dir=expand('~/dotfiles/dein/')
+let s:toml_dir=expand('~/dein/')
 
 " プラグインのロード
 if dein#load_state(s:dein_dir)
