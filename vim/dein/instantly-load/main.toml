@@ -102,10 +102,10 @@ hook_add = '''
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 hook_add = '''
-  map <Leader> <Plug>(easymotion-prefix)
+  nmap <Leader> <Plug>(easymotion-prefix)
   let g:EasyMotion_do_mapping = 0
-  map <Leader>w <Plug>(easymotion-jumptoanywhere)
-  map <Leader>jk <Plug>(easymotion-sol-bd-jk)
+  nmap <Leader>w <Plug>(easymotion-jumptoanywhere)
+  nmap <Leader>jk <Plug>(easymotion-sol-bd-jk)
   nmap <Leader>s <Plug>(easymotion-s2)
 '''
 
