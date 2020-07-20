@@ -59,7 +59,7 @@ set foldlevel=50
 " <<<
 
 "--------------------------------------------------------------
-"          indent                                           <<<
+"          indent, space, tab                               <<<
 "--------------------------------------------------------------
 filetype plugin indent on
 set expandtab
@@ -70,6 +70,20 @@ set smartindent
 set shiftwidth=2
 au FileType go setlocal sw=4 ts=4 sts=4 noet
 set list listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+
+"全角スペースをハイライト表示
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=red gui=reverse guifg=red
+endfunction   
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme       * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+    augroup END
+    call ZenkakuSpace()
+endif
+
 " <<<
 
 "--------------------------------------------------------------
