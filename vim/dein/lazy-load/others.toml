@@ -1,4 +1,3 @@
-# autoclose tags
 [[plugins]]
 repo = 'alvan/vim-closetag'
 on_ft = ['html', 'xhtml', 'javascript', 'typescript', 'javascript.jsx', 'typescript.tsx']
@@ -11,7 +10,17 @@ hook_add = '''
   let g:closetag_shortcut='>'
 '''
 
-# slim
 [[plugins]]
 repo = 'slim-template/vim-slim'
 on_ft = ['slim']
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+on_ft = ['yaml', 'yml', 'sh', 'toml']
+hook_add = '''
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+  let g:indent_guides_auto_colors = 0
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=237
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
+'''
