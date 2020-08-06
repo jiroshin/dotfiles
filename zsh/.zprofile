@@ -25,6 +25,7 @@ export PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick@6/6.9.10-27/lib/pkgconfig
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 export GOENV_DISABLE_GOPATH=1
+export SDL_ROOT=$HOME/Dev
 
 #--------------------------------------------------------------#
 ##        draft settings                                      ##

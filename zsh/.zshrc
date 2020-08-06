@@ -96,9 +96,9 @@ alias ghop='gh repo view --web'
 alias ringo='open -a Simulator'
 # 移動系
 alias dot='cd ~/dotfiles'
-alias dev='cd ~/Dev'
 alias lab='cd ~/Lab'
 alias desktop='cd ~/Desktop'
-#コマンド系
+alias dev='cd $(sdl | fzf)'
+# コマンド系
 alias railss='bin/rails s -b 0.0.0.0 -p 3000'
 alias dcu='docker-compose up'
