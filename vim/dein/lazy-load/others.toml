@@ -1,3 +1,5 @@
+# others
+
 [[plugins]]
 repo = 'alvan/vim-closetag'
 on_ft = ['html', 'xhtml', 'javascript', 'typescript', 'javascript.jsx', 'typescript.tsx']
@@ -16,7 +18,7 @@ on_ft = ['slim']
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
-on_ft = ['yaml', 'yml', 'sh', 'toml']
+on_ft = ['yaml', 'sh', 'conf']
 hook_add = '''
   let g:indent_guides_enable_on_vim_startup = 1
   let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
