@@ -7,7 +7,7 @@
 repo = 'preservim/nerdtree'
 hook_add = '''
   let NERDTreeShowHidden=1
-  nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 30<CR>
+  nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 40<CR>
 '''
 
 # icons
