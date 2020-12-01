@@ -75,7 +75,7 @@ set list listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 "全角スペースをハイライト表示
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=reverse ctermfg=red gui=reverse guifg=red
-endfunction   
+endfunction
 if has('syntax')
     augroup ZenkakuSpace
         autocmd!
@@ -119,9 +119,6 @@ imap <C-f> <Right>
 " visulaモードで選択してからのインデント調整で調整後に選択範囲を開放しない
 vnoremap > >gv
 vnoremap < <gv
-
-" 文字列置換のショートカット
-cnoremap S<CR> %s///gc<LEFT><LEFT><LEFT>
 
 " 画面分割系
 nnoremap sj <C-w>j
