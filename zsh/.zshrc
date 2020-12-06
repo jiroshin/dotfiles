@@ -66,16 +66,16 @@ export FZF_DEFAULT_OPTS='--height 30% --border'
 #--------------------------------------------------------------#
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-function ghq_fzf_repo() {
-  local remote_dir=$(ghq list | fzf)
-  if [ -n "$remote_dir" ]; then
-    BUFFER="cd ~/ghq/$remote_dir"
+function cd_ghq_and_sdl() {
+  local destination_dir=$(echo "$(ghq list --full-path) $(sdl)" | fzf)
+  if [ -n "$destination_dir" ]; then
+    BUFFER="cd $destination_dir"
     zle accept-line
   fi
-  zle -R -c
+  zle clear-screen
 }
-zle -N ghq_fzf_repo
-bindkey '^]' ghq_fzf_repo
+zle -N cd_ghq_and_sdl
+bindkey '^]' cd_ghq_and_sdl
 
 #--------------------------------------------------------------#
 ##        alias                                               ##
@@ -98,7 +98,6 @@ alias ringo='open -a Simulator'
 alias dot='cd ~/dotfiles'
 alias lab='cd ~/Lab'
 alias desktop='cd ~/Desktop'
-alias dev='cd $(sdl | fzf)'
 # コマンド系
 alias railss='bin/rails s -b 0.0.0.0 -p 3000'
 alias dcu='docker-compose up'
