@@ -58,7 +58,6 @@ PROMPT='%t %F{cyan}%~%f %K{green}%F{black}['\$vcs_info_msg_0_']%F{magenta}'\$vcs
 #--------------------------------------------------------------#
 export PATH="$PATH:$HOME/.fzf/bin"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
-export FZF_DEFAULT_OPTS='--height 30% --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #--------------------------------------------------------------#
@@ -76,6 +75,14 @@ function cd_ghq_and_sdl() {
 }
 zle -N cd_ghq_and_sdl
 bindkey '^]' cd_ghq_and_sdl
+
+function search_cmd_history() {
+  BUFFER=$(\history -n -r 1 | fzf --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N search_cmd_history
+bindkey '^h' search_cmd_history
 
 #--------------------------------------------------------------#
 ##        alias                                               ##
