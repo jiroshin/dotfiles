@@ -77,12 +77,29 @@ zle -N cd_ghq_and_sdl
 bindkey '^]' cd_ghq_and_sdl
 
 function search_cmd_history() {
-  BUFFER=$(\history -n -r 1 | fzf --query "$LBUFFER")
+  local tac
+  if which tac > /dev/null; then
+    tac="tac"
+  else
+    tac="tail -r"
+  fi
+  BUFFER=$(\history -n -r 1 | eval $tac | fzf --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }
 zle -N search_cmd_history
 bindkey '^h' search_cmd_history
+
+function search_git_checkout_branch() {
+  local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | perl -pne 's{^refs/heads/}{}' | fzf --query "$LBUFFER")
+  if [ -n "$selected_branch" ]; then
+    BUFFER="git checkout ${selected_branch}"
+    CURSOR=$#BUFFER
+  fi
+  zle clear-screen
+}
+zle -N search_git_checkout_branch
+bindkey "^b" search_git_checkout_branch
 
 #--------------------------------------------------------------#
 ##        alias                                               ##
