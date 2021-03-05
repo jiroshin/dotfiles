@@ -4,6 +4,7 @@
 export LC_ALL=ja_JP.UTF-8
 # export LANG=ja_JP.UTF-8
 export HISTSIZE=50000
+export SAVEHIST=50000
 
 #--------------------------------------------------------------#
 ##        fzf settings                                        ##
