@@ -1,7 +1,7 @@
 #--------------------------------------------------------------#
-##        source each PC settings                             ##
+##        source local zsh settings                           ##
 #--------------------------------------------------------------#
-[ -f ~/dotfiles/local/main.sh ] && source ~/dotfiles/local/main.sh
+[ -f ~/dotfiles/local/local.sh ] && source ~/dotfiles/local/local.sh
 
 #--------------------------------------------------------------#
 ##        set 256color                                        ##
