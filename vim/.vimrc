@@ -7,7 +7,9 @@ set shell=/bin/zsh
 "--------------------------------------------------------------
 "          source local settings                            <<<
 "--------------------------------------------------------------
-source ~/dotfiles/local/local.vim
+if filereadable(expand('~/dotfiles/local/local.vim'))
+  source ~/dotfiles/local/local.vim
+endif
 " <<<
 
 "--------------------------------------------------------------
