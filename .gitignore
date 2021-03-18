@@ -3,3 +3,5 @@ vim/.vim/plugged
 vim/.vim/.netrwhist
 vim/.vim/.tags
 local/*
+!local/local.sh.sample
+!local/local.vim.sample
