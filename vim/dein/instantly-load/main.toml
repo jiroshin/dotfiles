@@ -72,15 +72,15 @@ hook_add = '''
   let g:rainbow_active = 1
 '''
 
-[[plugins]]
-repo = 'honza/vim-snippets'
-
-[[plugins]]
-repo = 'SirVer/ultisnips'
-hook_add = '''
-  let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-  let g:UltiSnipsExpandTrigger="<Down>"
-'''
+# [[plugins]]
+# repo = 'honza/vim-snippets'
+#
+# [[plugins]]
+# repo = 'SirVer/ultisnips'
+# hook_add = '''
+#   let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+#   let g:UltiSnipsExpandTrigger="<Down>"
+# '''
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
