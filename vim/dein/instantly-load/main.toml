@@ -10,10 +10,6 @@ hook_add = '''
   nnoremap <silent><C-a> :NERDTreeFind<CR>:vertical res 40<CR>
 '''
 
-# icons
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
 # enable tmux to use autoread
 [[plugins]]
 repo = 'tmux-plugins/vim-tmux-focus-events'
