@@ -23,7 +23,6 @@ set termencoding=utf8
 set fileencodings=utf-8,ucs-boms,euc-jp,ep932
 set fileformats=unix,dos,mac
 set ambiwidth=double
-set nobomb
 set t_Co=256
 " <<<
 
@@ -70,7 +69,6 @@ set foldlevel=50
 "--------------------------------------------------------------
 "          indent, space, tab                               <<<
 "--------------------------------------------------------------
-filetype plugin indent on
 set expandtab
 set tabstop=2
 set softtabstop=2
@@ -110,9 +108,9 @@ inoremap ` ``<LEFT>
 inoremap < <><LEFT>
 
 " 関数括弧の補完
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
+inoremap {<CR> {}<Left><CR><ESC><S-o>
+inoremap [<CR> []<Left><CR><ESC><S-o>
+inoremap (<CR> ()<Left><CR><ESC><S-o>
 
 " クオーテーションの補完
 inoremap ' ''<LEFT>
@@ -124,7 +122,7 @@ imap <C-n> <Down>
 imap <C-b> <Left>
 imap <C-f> <Right>
 
-" visulaモードで選択してからのインデント調整で調整後に選択範囲を開放しない
+" visualモードで選択してからのインデント調整で調整後に選択範囲を開放しない
 vnoremap > >gv
 vnoremap < <gv
 
@@ -162,7 +160,7 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 " tomlセット
-let s:toml_dir=expand('~/dein/')
+let s:toml_dir = expand('~/dein/')
 
 " プラグインのロード
 if dein#load_state(s:dein_dir)
@@ -170,14 +168,14 @@ if dein#load_state(s:dein_dir)
 
   " load plugins instantly
   let s:instantlyFiles = glob(s:toml_dir . 'instantly-load/*.toml')
-  for file in split(s:instantlyFiles, "\n")
-    call dein#load_toml(file)
+  for s:file in split(s:instantlyFiles, "\n")
+    call dein#load_toml(s:file)
   endfor
 
   " load plugins lazy
   let s:lazyFiles = glob(s:toml_dir . 'lazy-load/*.toml')
-  for file in split(s:lazyFiles, "\n")
-    call dein#load_toml(file, { 'lazy': 1 })
+  for s:file in split(s:lazyFiles, "\n")
+    call dein#load_toml(s:file, { 'lazy': 1 })
   endfor
 
   call dein#end()
@@ -203,4 +201,5 @@ endif
 
 syntax on
 colorscheme onedark
+filetype plugin indent on
 " <<<
