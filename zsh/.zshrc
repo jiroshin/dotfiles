@@ -45,7 +45,6 @@ zstyle ':vcs_info:git:*' formats '%b' '%c%u'
 zstyle ':vcs_info:git:*' stagedstr "+"
 zstyle ':vcs_info:git:*' unstagedstr "*"
 source /usr/local/etc/zsh-kubectl-prompt/kubectl.zsh
-# PROMPT='%t %{$fg[cyan]%}%~%{$reset_color%} %{$bg[green]%}%{$fg[black]%}['\$vcs_info_msg_0_']%{$fg[magenta]%}'\$vcs_info_msg_1_'%{$reset_color%} %{$bg[cyan]%}%{$fg[black]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%} %{$fg[green]%}(^-^)/%{$reset_color%} '
 PROMPT='%t %F{cyan}%~%f %K{green}%F{black}['\$vcs_info_msg_0_']%F{magenta}'\$vcs_info_msg_1_'%f%K %K{cyan}%F{black}($ZSH_KUBECTL_PROMPT)%f%K %F{green}(^-^)/%f '
 
 #--------------------------------------------------------------#
@@ -125,3 +124,7 @@ alias desktop='cd ~/Desktop'
 # コマンド系
 alias railss='bin/rails s -b 0.0.0.0 -p 3000'
 alias dcu='docker-compose up'
+
+#--------------------------------------------------------------#
+##        others                                              ##
+#--------------------------------------------------------------#
