@@ -63,7 +63,7 @@ hook_add = '''
   nnoremap <C-p> :GFiles<CR>
   nnoremap <C-l> :Files<CR>
   nnoremap <C-h> :History<CR>
-  nnoremap <C-]> :call fzf#run(fzf#wrap({'source': 'ghq list --full-path', 'sink': 'e' }))<CR>
+  nnoremap <C-]> :call fzf#run(fzf#wrap({'source': 'ghq list --full-path', 'sink': 'cd' }))<CR>
 '''
 
 # 括弧のレインボーハイライト
