@@ -31,8 +31,5 @@ export GOENV_DISABLE_GOPATH=1
 export SDL_ROOT=$HOME/Dev
 
 #--------------------------------------------------------------#
-##        draft settings                                      ##
+##        others                                              ##
 #--------------------------------------------------------------#
-# SHELL LOGIN WITH TMUX / If not running interactively, do not do anything
-# [[ $- != *i* ]] && return
-# [[ -z "$TMUX" ]] && exec tmux
