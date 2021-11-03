@@ -25,8 +25,6 @@ mkdir ~/Desktop/old_settings/
 #--------------------------------------------------------------#
 echo 'start: Install HomeBrew'
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew update
-brew doctor
 echo 'complete: Install Homebrew'
 
 homebrew_pkgs=(
