@@ -1,18 +1,10 @@
-# jiroshin's dotfiles 🐜
+# jiroshin's dotfiles
 
-## Contents
-settings for   
-- zsh
-- Vim
-- tmux
-- tig  
-and...
-
-## Usage
+## Setup
 
 ### macOS
 ```sh:terminal
-$ curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/mac-setup.sh | sh
+$ curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/macos.sh | sh
 ```
 
 ## Memo

@@ -1,29 +1,29 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
+
 cd ~
 #--------------------------------------------------------------#
-##        OS settings                                         ##
+##        macOS settings                                      ##
 #--------------------------------------------------------------#
-echo 'start: setup os settings'
 defaults write com.apple.finder AppleShowAllFiles TRUE
-echo 'complete: setup os settings'
 
 #--------------------------------------------------------------#
-##        Clean setting files                                 ##
+##        clean old setting files                             ##
 #--------------------------------------------------------------#
-echo 'start: Clean setting files'
-[ -f ~/.zshrc ] && rm ~/.zshrc
-[ -f ~/.zprofile ] && rm ~/.zprofile
-[ -f ~/.bashrc ] && rm ~/.bashrc
-[ -f ~/.bash_profile ] && rm ~/.bash_profile
-[ -f ~/.vimrc ] && rm ~/.vimrc
-[ -d ~/.vim ] && rm -r ~/.vim
-echo 'complete: Clean setting files'
+touch ~/Desktop/old_settings/
+[ -f ~/.zshrc ] && mv ~/.zshrc ~/Desktop/old_settings/
+[ -f ~/.zprofile ] && mv ~/.zprofile ~/Desktop/old_settings/
+[ -f ~/.bashrc ] && mv ~/.bashrc ~/Desktop/old_settings/
+[ -f ~/.bash_profile ] && mv ~/.bash_profile ~/Desktop/old_settings/
+[ -f ~/.vimrc ] && mv ~/.vimrc ~/Desktop/old_settings/
+[ -d ~/.vim ] && mv ~/.vim ~/Desktop/old_settings/
 
 #--------------------------------------------------------------#
-##        HomeBrew install                                    ##
+##        HomeBrew                                            ##
 #--------------------------------------------------------------#
 echo 'start: Install HomeBrew'
-/usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 brew doctor
 echo 'complete: Install Homebrew'
@@ -57,38 +57,24 @@ brew cask install alacritty
 [ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
 
 #--------------------------------------------------------------#
-##       others install                                       ##
-#--------------------------------------------------------------
-
+##        Git                                                 ##
 #--------------------------------------------------------------#
-##        git clone dotfiles                                  ##
-#--------------------------------------------------------------#
-echo 'start: git clone dotfiles'
 git clone https://github.com/jiroshin/dotfiles.git ~/dotfiles
-echo 'complete: git clone dotfiles'
 chmod 755 ~/dotfiles/tmux/tmuxbins/wifi
 chmod 755 ~/dotfiles/tmux/tmuxbins/battery
 
 #--------------------------------------------------------------#
-##        change shell and start                              ##
-#--------------------------------------------------------------#
-ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
-chmod 755 /usr/local/share/zsh/site-functions
-chmod 755 /usr/local/share/zsh
-zsh
-
-#--------------------------------------------------------------#
-##        set Symbolic Links                                  ##
+##        Symbolic Links                                      ##
 #--------------------------------------------------------------#
 echo 'start: setup Symbolic Links'
+ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/dotfiles/bash/.bash_profile ~/.bash_profile
 ln -s ~/dotfiles/bash/.bashrc ~/.bashrc
-ln -s ~/dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/dotfiles/vim/.vim ~/.vim
 ln -s ~/dotfiles/vim/dein ~/dein
 ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 ln -s ~/dotfiles/tig/.tigrc ~/.tigrc
 ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/alacritty/alacritty.yml ~/.alacritty.yml
-source ~/.zshrc
 echo 'complete: setup Symbolic Links'
