@@ -18,6 +18,7 @@ mkdir ~/Desktop/old_settings/
 [ -f ~/.bash_profile ] && mv ~/.bash_profile ~/Desktop/old_settings/
 [ -f ~/.vimrc ] && mv ~/.vimrc ~/Desktop/old_settings/
 [ -d ~/.vim ] && mv ~/.vim ~/Desktop/old_settings/
+[ -d ~/.config/alacritty ] && mv ~/.config/alacritty ~/Desktop/old_settings/
 
 #--------------------------------------------------------------#
 ##        HomeBrew                                            ##
@@ -28,25 +29,20 @@ brew update
 brew doctor
 echo 'complete: Install Homebrew'
 
-echo 'Installing zsh...'
-brew install zsh
-brew install zsh-completion
+homebrew_pkgs=(
+  "zsh"
+  "zsh-completion"
+  "git"
+  "openssl"
+  "ghq"
+  "fzf"
+  "reattach-to-user-namespace"
+  "github/gh/gh"
+)
 
-echo 'Installing git...'
-brew install git
-
-echo 'Installing openssl...'
-brew install openssl
-
-echo 'Installing ghq...'
-brew install ghq
-
-echo 'Installing fzf...'
-brew install fzf
-
-echo 'Installing others...'
-brew install reattach-to-user-namespace
-brew install github/gh/gh
+for pkg in ${homebrew_pkgs[@]}; do
+  brew install ${pkg}
+done
 
 # vimで使うアイコンのフォントたち
 brew tap homebrew/cask-fonts
@@ -54,7 +50,6 @@ brew cask install font-hack-nerd-font
 
 echo 'Installing alacritty...'
 brew cask install alacritty
-[ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
 
 #--------------------------------------------------------------#
 ##        Git                                                 ##
