@@ -60,7 +60,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 function cd_ghq_and_sdl() {
-  local destination_dir=$(echo "$(ghq list --full-path) $(sdl)" | fzf)
+  local destination_dir=$(echo -e "$(ghq list --full-path)\n$(sdl)" | fzf)
   if [ -n "$destination_dir" ]; then
     BUFFER="cd $destination_dir"
     zle accept-line
