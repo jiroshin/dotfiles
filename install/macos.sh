@@ -43,6 +43,7 @@ brew install github/gh/gh
 brew install git-secret
 brew install gnupg
 brew tap homebrew/cask-fonts
+brew install postgresql
 brew install --cask font-hack-nerd-font
 brew install --cask alacritty
 [ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
@@ -70,4 +71,5 @@ ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 ln -s ~/dotfiles/tig/.tigrc ~/.tigrc
 ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/alacritty/alacritty.yml ~/.alacritty.yml
+ln -s ~/dotfiles/vim/.vimrc ~/.ideavimrc
 echo 'complete: setup Symbolic Links'

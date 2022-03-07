@@ -44,7 +44,7 @@ set belloff=all
 " 行番号系
 set number
 
-" タイトル系
+" タイトル
 set title
 
 " 挿入モードでバックスペースで削除できるようにする
@@ -200,6 +200,6 @@ if (empty($TMUX))
 endif
 
 syntax on
-colorscheme onedark
+" colorscheme onedark
 filetype plugin indent on
 " <<<
