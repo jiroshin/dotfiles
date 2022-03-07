@@ -42,8 +42,10 @@ brew install reattach-to-user-namespace
 brew install github/gh/gh
 brew install git-secret
 brew install gnupg
-brew tap homebrew/cask-fonts
 brew install postgresql
+brew install goenv
+brew install ripgrep
+brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 brew install --cask alacritty
 [ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
