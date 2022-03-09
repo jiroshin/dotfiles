@@ -45,6 +45,7 @@ brew install gnupg
 brew install postgresql
 brew install goenv
 brew install ripgrep
+brew install openapi-generator
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 brew install --cask alacritty
