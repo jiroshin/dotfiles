@@ -200,6 +200,6 @@ if (empty($TMUX))
 endif
 
 syntax on
-" colorscheme onedark
+colorscheme onedark
 filetype plugin indent on
 " <<<
