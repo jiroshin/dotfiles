@@ -22,7 +22,7 @@ repo = 'simeji/winresizer'
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
 hook_add = '''
-  vnoremap ? :'<,'>TComment<CR>
+  vnoremap ? :TComment<CR>
 '''
 
 # gitのHEADとの差分を表示
