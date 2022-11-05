@@ -109,7 +109,6 @@ alias la='ls -a'
 alias ll='ls -l'
 alias gco='git checkout'
 alias gp='git pull'
-alias gphead="git pull origin $(git rev-parse --abbrev-ref HEAD)"
 alias gf='git fetch'
 alias vi='vim'
 alias v='vim'
