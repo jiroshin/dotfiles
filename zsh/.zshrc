@@ -121,9 +121,6 @@ alias ringo='open -a Simulator'
 alias dot='cd ~/dotfiles'
 alias lab='cd ~/Lab'
 alias desktop='cd ~/Desktop'
-# コマンド系
-alias railss='bin/rails s -b 0.0.0.0 -p 3000'
-alias dcu='docker-compose up'
 
 #--------------------------------------------------------------#
 ##        others                                              ##
