@@ -48,8 +48,6 @@ brew install ripgrep
 brew install kubectl
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
-brew tap superbrothers/zsh-kubectl-prompt
-brew install zsh-kubectl-prompt
 brew install --cask alacritty
 [ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
 
@@ -60,6 +58,7 @@ git clone https://github.com/jiroshin/dotfiles.git ~/dotfiles
 chmod 755 ~/dotfiles/tmux/tmuxbins/wifi
 chmod 755 ~/dotfiles/tmux/tmuxbins/battery
 touch ~/dotfiles/local/local.sh
+git clone https://github.com/superbrothers/zsh-kubectl-prompt ~/dotfiles/local/zsh-autosuggestions
 echo "source ~/dotfiles/local/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/dotfiles/local/local.sh
 
 #--------------------------------------------------------------#
