@@ -11,7 +11,7 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 #--------------------------------------------------------------#
 ##        clean old setting files                             ##
 #--------------------------------------------------------------#
-# [ -d ~/Desktop/old_settings ] && mkdir ~/Desktop/old_settings/
+[ -d ~/Desktop/old_settings ] && mkdir ~/Desktop/old_settings/
 [ -f ~/.zshrc ] && mv ~/.zshrc ~/Desktop/old_settings/
 [ -f ~/.zprofile ] && mv ~/.zprofile ~/Desktop/old_settings/
 [ -f ~/.bashrc ] && mv ~/.bashrc ~/Desktop/old_settings/
@@ -23,8 +23,8 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 ##        HomeBrew                                            ##
 #--------------------------------------------------------------#
 # echo 'start: Install HomeBrew'
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# brew update
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew update
 # echo 'complete: Install Homebrew'
 
 brew install tmux
@@ -43,9 +43,8 @@ brew install github/gh/gh
 brew install git-secret
 brew install gnupg
 brew install postgresql
-brew install goenv
+brew install anyenv
 brew install ripgrep
-brew install openapi-generator
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 brew install --cask alacritty
