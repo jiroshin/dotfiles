@@ -22,10 +22,10 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 #--------------------------------------------------------------#
 ##        HomeBrew                                            ##
 #--------------------------------------------------------------#
-# echo 'start: Install HomeBrew'
+echo 'start: Install Homebrew'
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
-# echo 'complete: Install Homebrew'
+echo 'complete: Install Homebrew'
 
 brew install tmux
 brew install node
