@@ -61,6 +61,7 @@ chmod 755 ~/dotfiles/tmux/tmuxbins/battery
 touch ~/dotfiles/local/local.sh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/dotfiles/local/zsh-autosuggestions
 echo "source ~/dotfiles/local/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/dotfiles/local/local.sh
+git clone https://github.com/superbrothers/zsh-kubectl-prompt ~/dotfiles/local/zsh-kubectl-prompt
 
 #--------------------------------------------------------------#
 ##        Symbolic Links                                      ##
