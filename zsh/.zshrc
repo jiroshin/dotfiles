@@ -45,7 +45,10 @@ zstyle ':vcs_info:git:*' formats '%b' '%c%u'
 zstyle ':vcs_info:git:*' stagedstr "+"
 zstyle ':vcs_info:git:*' unstagedstr "*"
 source ~/dotfiles/local/zsh-kubectl-prompt/kubectl.zsh
-PROMPT='%t %F{cyan}%~%f %K{green}%F{black}['\$vcs_info_msg_0_']%F{magenta}'\$vcs_info_msg_1_'%f%K %K{cyan}%F{black}($ZSH_KUBECTL_PROMPT)%f%K %F{green}(^-^)/%f '
+# promptにk8sのcontext表示させる場合
+# PROMPT='%t %F{cyan}%~%f %K{green}%F{black}['\$vcs_info_msg_0_']%F{magenta}'\$vcs_info_msg_1_'%f%K %K{cyan}%F{black}($ZSH_KUBECTL_PROMPT)%f%K %F{green}(^-^)/%f '
+# promptにk8sのcontext表示させない場合
+PROMPT='%t %F{cyan}%~%f %K{green}%F{black}['\$vcs_info_msg_0_']%F{magenta}'\$vcs_info_msg_1_'%f%K %F{green}(^-^)/%f '
 
 #--------------------------------------------------------------#
 ##        fzf settings                                        ##
