@@ -11,7 +11,7 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 #--------------------------------------------------------------#
 ##        clean old setting files                             ##
 #--------------------------------------------------------------#
-[ -d ~/Desktop/old_settings ] && mkdir ~/Desktop/old_settings/
+mkdir ~/Desktop/old_settings/
 [ -f ~/.zshrc ] && mv ~/.zshrc ~/Desktop/old_settings/
 [ -f ~/.zprofile ] && mv ~/.zprofile ~/Desktop/old_settings/
 [ -f ~/.bashrc ] && mv ~/.bashrc ~/Desktop/old_settings/
