@@ -3,8 +3,8 @@
 ## Setup
 
 ### macOS
-```sh:terminal
-$ curl -sS https://raw.githubusercontent.com/jiroshin/dotfiles/master/macos.sh | sh
+```bash:terminal
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jiroshin/dotfiles/master/install/macos.sh)"
 ```
 
 ## Memo
