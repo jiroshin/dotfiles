@@ -48,6 +48,8 @@ brew install ripgrep
 brew install kubectl
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
+brew tap superbrothers/zsh-kubectl-prompt
+brew install zsh-kubectl-prompt
 brew install --cask alacritty
 [ -d ~/.config/alacritty ] && rm ~/.config/alacritty/alacritty.yml
 
