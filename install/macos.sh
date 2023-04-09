@@ -44,6 +44,7 @@ brew install git-secret
 brew install gnupg
 brew install postgresql
 brew install anyenv
+anyenv install --init
 brew install ripgrep
 brew install kubectl
 brew tap homebrew/cask-fonts
