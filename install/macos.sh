@@ -45,6 +45,7 @@ brew install gnupg
 brew install postgresql
 brew install anyenv
 anyenv install --init
+brew install direnv
 brew install ripgrep
 brew install kubectl
 brew tap homebrew/cask-fonts
