@@ -11,6 +11,7 @@ export PATH=$GOPATH/bin:$PATH
 export GOENV_DISABLE_GOPATH=1
 export SDL_ROOT=$HOME/Dev
 export PATH=$HOME/ghq/github.com/jiroshin/starting-directory-list:$PATH
+export GPG_TTY=$(tty)
 
 #--------------------------------------------------------------#
 ##        fzf settings                                        ##
