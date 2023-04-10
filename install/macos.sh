@@ -28,7 +28,6 @@ brew update
 echo 'complete: Install Homebrew'
 
 brew install tmux
-brew install node
 brew install zsh
 brew install zsh-completion
 brew install git
