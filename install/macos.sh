@@ -49,6 +49,7 @@ brew install pre-commit
 brew install ripgrep
 brew install kubectl
 brew install cmake
+brew install pinentry-mac
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 brew install --cask alacritty
