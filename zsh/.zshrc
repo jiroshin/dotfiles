@@ -120,7 +120,6 @@ alias t='tmux -u'
 alias brcopy='git symbolic-ref --short HEAD | pbcopy'
 alias ghop='gh repo view --web'
 alias ringo='open -a Simulator'
-# 移動系
 alias dot='cd ~/dotfiles'
 alias lab='cd ~/Lab'
 alias desktop='cd ~/Desktop'
