@@ -99,6 +99,9 @@ repo = 'ruanyl/vim-gh-line'
 [[plugins]]
 repo = 'mattn/vim-yoshi'
 
+[[plugins]]
+repo = 'nicwest/vim-camelsnek'
+
 #--------------------------------------------------------------#
 ##        LSP                                                 ##
 #--------------------------------------------------------------#
