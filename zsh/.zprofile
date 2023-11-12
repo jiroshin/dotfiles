@@ -4,8 +4,7 @@
 export LC_ALL=ja_JP.UTF-8
 export HISTSIZE=50000
 export SAVEHIST=50000
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+export PATH=$HOME/.anyenv/bin:$PATH
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 export GOENV_DISABLE_GOPATH=1
@@ -26,3 +25,4 @@ fi
 #--------------------------------------------------------------#
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(direnv hook zsh)"
+eval "$(anyenv init -)"
