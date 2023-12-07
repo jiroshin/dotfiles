@@ -128,3 +128,10 @@ hook_add = '''
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)
 '''
+
+#--------------------------------------------------------------#
+##        copilot                                             ##
+#--------------------------------------------------------------#
+[[plugins]]
+repo = 'github/copilot.vim'
+rev = 'release'
